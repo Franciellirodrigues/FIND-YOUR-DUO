@@ -1,12 +1,12 @@
-import { ColorValue, Text, View } from 'react-native';
-import { THEME } from "../../theme";
+import { View, Text, ColorValue } from 'react-native';
+import { THEME } from '../../theme';
 
 import { styles } from './styles';
 
 interface Props {
   label: string;
   value: string;
-  colorValue?: ColorValue
+  colorValue?: ColorValue;
 }
 
 export function DuoInfo({ label, value, colorValue = THEME.COLORS.TEXT }: Props) {
@@ -16,7 +16,7 @@ export function DuoInfo({ label, value, colorValue = THEME.COLORS.TEXT }: Props)
         {label}
       </Text>
 
-      <Text
+      <Text 
         style={[styles.value, { color: colorValue }]}
         numberOfLines={1}
       >
